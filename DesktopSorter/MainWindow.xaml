@@ -1,0 +1,56 @@
+﻿<Window x:Class="DesktopSorter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopSorter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" StateChanged="Window_StateChanged">
+
+    <Grid Margin="0">
+        <StackPanel Margin="26,50,26,10" Grid.Column="1">
+            <TextBlock Padding="0 0 0 5">Find files in folder:</TextBlock>
+            <TextBox Padding="0 0 0 5" Text="{Binding FindFolder}" x:Name="findFolderTextBox"/>
+            <TextBlock Padding="0 0 0 5">Filter:</TextBlock>
+            <TextBox Padding="0 0 0 5" Text="{Binding Filter}" x:Name="filterTextBox"/>
+            <TextBlock Padding="0 0 0 5">Move files in folder:</TextBlock>
+            <TextBox Padding="0 0 0 5" Text="{Binding DestinationFolder}" x:Name="destinationFolder"/>
+            <Button Click="FindClick" Content="Find"/>
+            <Button Click="MoveClick" Content="Move selected"/>
+            <ListBox Background="AliceBlue" x:Name="listBox1" Height="100">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding}">
+                                <TextBlock.ToolTip>
+                                    <ToolTip Width="400">
+                                        <StackPanel Orientation="Vertical">
+                                            <Image Name="itemImage" Source="{Binding}"/>
+                                        </StackPanel>
+                                    </ToolTip>
+                                </TextBlock.ToolTip>
+                            </TextBlock>
+                            
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <HeaderedItemsControl Header="Фильтры" Background="LightCyan" Height="100">
+                <HeaderedItemsControl.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Header}"/>
+                    </DataTemplate>
+                </HeaderedItemsControl.HeaderTemplate>
+                <HeaderedItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox IsChecked="False"/>
+                            <TextBlock Text="Gttt"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </HeaderedItemsControl.ItemTemplate>
+            </HeaderedItemsControl>
+        </StackPanel>
+    </Grid>
+</Window>

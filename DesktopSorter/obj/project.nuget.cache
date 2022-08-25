@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UpGLcdfaxFb/zyESoINguyW8JAC6VVu8Bg4SCEqiC38gpEUfayXupqIZtDT3VM6A9gu+JSry5x08lHJvLD338w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sshan\\source\\repos\\DesktopSorter\\DesktopSorter\\DesktopSorter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sshan\\.nuget\\packages\\hardcodet.notifyicon.wpf\\1.1.0\\hardcodet.notifyicon.wpf.1.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
